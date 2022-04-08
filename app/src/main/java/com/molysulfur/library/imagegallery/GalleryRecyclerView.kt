@@ -45,7 +45,8 @@ class GalleryRecyclerView @JvmOverloads constructor(
         }
         when (this.urlLists.size) {
             1 -> {
-
+                layoutManager = ImageGalleryLayoutManager(context, galleryAdapter, 1)
+                galleryAdapter.itemLists = mutableListOf(ImageGalleryItem.HorizontalItem(this.urlLists[0]))
             }
             2 -> {
                 val itemList: MutableList<ImageGalleryItem> = convert2PicImage()
