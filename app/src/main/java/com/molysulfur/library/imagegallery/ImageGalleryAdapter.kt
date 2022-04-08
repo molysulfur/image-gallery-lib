@@ -1,5 +1,6 @@
 package com.molysulfur.library.imagegallery
 
+import android.graphics.Bitmap
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,10 +12,11 @@ class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAd
 
     var itemLists = mutableListOf<ImageGalleryItem>()
         set(value) {
-            Log.e("ImageGalleryAdapter", "$value")
             field = value
             notifyDataSetChanged()
         }
+
+    var onClick: ((Bitmap?, Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         ImageGalleryType.IMAGE_GALLERY_RECTANGLE ->
@@ -51,10 +53,18 @@ class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAd
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = itemLists[position]
         when (holder) {
-            is MoreImageViewHolder -> holder.bind(item = item as ImageGalleryItem.MoreItem)
-            is RactangleImageViewHolder -> holder.bind(item = item as ImageGalleryItem.RactangleItem)
-            is HorizontalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.HorizontalItem)
-            is VeriticalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.VeriticalItem)
+            is MoreImageViewHolder -> holder.bind(item = item as ImageGalleryItem.MoreItem) {
+                onClick?.invoke(it, position)
+            }
+            is RactangleImageViewHolder -> holder.bind(item = item as ImageGalleryItem.RactangleItem) {
+                onClick?.invoke(it, position)
+            }
+            is HorizontalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.HorizontalItem) {
+                onClick?.invoke(it, position)
+            }
+            is VeriticalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.VeriticalItem) {
+                onClick?.invoke(it, position)
+            }
             is HorizontalAdapterViewHolder -> holder.bind(imageAdapter = wrapperAdapter, item = item as ImageGalleryItem.HorizontalAdapterItem)
             is VeriticalAdapterViewHolder -> holder.bind(imageAdapter = wrapperAdapter, item = item as ImageGalleryItem.VeriticalAdapterItem)
         }

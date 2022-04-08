@@ -1,6 +1,7 @@
 package com.molysulfur.library.imagegallery
 
 import android.graphics.Bitmap
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,9 @@ class MainAdapter constructor(private val bitmaps: MutableList<Bitmap?>) : Recyc
         fun bind(bitmaps: MutableList<Bitmap?>) {
             val gallery = view.findViewById<GalleryRecyclerView>(R.id.gallery)
             gallery.setImageUrlList(bitmaps)
+            gallery.onItemClick = { bitmap, position ->
+                Log.e("Item $position", "$position,$bitmap")
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ package com.molysulfur.library.imagegallery
 import android.content.Context
 import android.graphics.Bitmap
 import android.util.AttributeSet
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 
 class GalleryRecyclerView @JvmOverloads constructor(
@@ -15,13 +16,26 @@ class GalleryRecyclerView @JvmOverloads constructor(
         private val LIMIT_SIZE = 3
     }
 
+
     private var urlLists = mutableListOf<Bitmap?>()
 
+    var onItemClick: ((Bitmap?, Int) -> Unit)? = null
+
     private val wrapperAdapter: ImageGalleryAdapter by lazy {
-        ImageGalleryAdapter()
+        ImageGalleryAdapter().apply {
+            onClick = clickListener()
+        }
     }
+
+
     private val galleryAdapter: ImageGalleryAdapter by lazy {
-        ImageGalleryAdapter(wrapperAdapter)
+        ImageGalleryAdapter(wrapperAdapter).apply {
+            onClick = clickListener()
+        }
+    }
+
+    private fun clickListener(): ((Bitmap?, Int) -> Unit) = { b, i ->
+        onItemClick?.invoke(b, i)
     }
 
     fun setImageUrlList(urlLists: MutableList<Bitmap?>) {
