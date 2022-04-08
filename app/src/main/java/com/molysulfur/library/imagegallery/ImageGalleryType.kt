@@ -7,5 +7,6 @@ object ImageGalleryType {
     const val IMAGE_GALLERY_VERITICAL = 2
     const val IMAGE_GALLERY_HORIZONTAL_ADAPTER = 3
     const val IMAGE_GALLERY_VERITICAL_ADAPTER = 4
+    const val IMAGE_GALLERY_MORE = 5
 
 }

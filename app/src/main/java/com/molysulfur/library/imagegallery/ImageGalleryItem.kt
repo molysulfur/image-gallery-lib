@@ -22,4 +22,7 @@ sealed class ImageGalleryItem constructor(val type: Int) : Parcelable {
     @Parcelize
     class VeriticalAdapterItem(val images: MutableList<ImageGalleryItem>, val spanCount: Int = 1) : ImageGalleryItem(ImageGalleryType.IMAGE_GALLERY_VERITICAL_ADAPTER)
 
+    @Parcelize
+    data class MoreItem(val bitmap: Bitmap?, val count: Int) : ImageGalleryItem(ImageGalleryType.IMAGE_GALLERY_MORE)
+
 }

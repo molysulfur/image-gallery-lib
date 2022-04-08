@@ -1,5 +1,6 @@
 package com.molysulfur.library.imagegallery
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAd
 
     var itemLists = mutableListOf<ImageGalleryItem>()
         set(value) {
+            Log.e("ImageGalleryAdapter", "$value")
             field = value
             notifyDataSetChanged()
         }
@@ -38,6 +40,10 @@ class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAd
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.image_gallery_item_recycler, parent, false)
         )
+        ImageGalleryType.IMAGE_GALLERY_MORE -> MoreImageViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.image_gallery_item_more, parent, false)
+        )
         else -> throw Error("Image Gallery isn't match type.")
     }
 
@@ -45,6 +51,7 @@ class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAd
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = itemLists[position]
         when (holder) {
+            is MoreImageViewHolder -> holder.bind(item = item as ImageGalleryItem.MoreItem)
             is RactangleImageViewHolder -> holder.bind(item = item as ImageGalleryItem.RactangleItem)
             is HorizontalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.HorizontalItem)
             is VeriticalImageViewHolder -> holder.bind(item = item as ImageGalleryItem.VeriticalItem)

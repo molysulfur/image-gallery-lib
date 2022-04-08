@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.21944444444444444" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1787037037037037" />
         <entry key="app/src/main/res/layout/image_gallery_item_horizontal.xml" value="0.2078125" />
         <entry key="app/src/main/res/layout/image_gallery_item_image.xml" value="0.2078125" />
-        <entry key="app/src/main/res/layout/image_gallery_item_ractangle.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/image_gallery_item_more.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/image_gallery_item_ractangle.xml" value="0.13452914798206278" />
         <entry key="app/src/main/res/layout/image_gallery_item_recycler.xml" value="0.2078125" />
         <entry key="app/src/main/res/layout/image_gallery_item_veritical.xml" value="0.2078125" />
+        <entry key="app/src/main/res/layout/item_example_gallery_view.xml" value="0.2078125" />
       </map>
     </option>
   </component>
