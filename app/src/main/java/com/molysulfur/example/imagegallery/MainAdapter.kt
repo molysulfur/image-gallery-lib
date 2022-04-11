@@ -1,12 +1,13 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.example.imagegallery
 
 import android.graphics.Bitmap
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.molysulfur.library.galleryimage.GalleryRecyclerView
+import com.molysulfur.library.imagegallery.R
 
 class MainAdapter constructor(private val bitmaps: MutableList<Bitmap?>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 

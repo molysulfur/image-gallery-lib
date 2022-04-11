@@ -1,11 +1,11 @@
-package com.molysulfur.library.imagegallery.holder
+package com.molysulfur.library.galleryimage.holder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.molysulfur.library.imagegallery.ImageGalleryAdapter
-import com.molysulfur.library.imagegallery.ImageGalleryItem
-import com.molysulfur.library.imagegallery.ImageGalleryLayoutManager
-import com.molysulfur.library.imagegallery.R
+import com.molysulfur.library.galleryimage.ImageGalleryAdapter
+import com.molysulfur.library.galleryimage.ImageGalleryItem
+import com.molysulfur.library.galleryimage.ImageGalleryLayoutManager
+import com.molysulfur.library.galleryimage.R
 
 class VeriticalAdapterViewHolder constructor(private val view: View) : RecyclerView.ViewHolder(view) {
 

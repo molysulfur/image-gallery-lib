@@ -1,11 +1,10 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.library.galleryimage
 
 import android.graphics.Bitmap
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.molysulfur.library.imagegallery.holder.*
+import com.molysulfur.library.galleryimage.holder.*
 import java.lang.Error
 
 class ImageGalleryAdapter constructor(private val wrapperAdapter: ImageGalleryAdapter? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

@@ -1,4 +1,4 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.library.galleryimage
 
 import android.content.Context
 import androidx.recyclerview.widget.GridLayoutManager

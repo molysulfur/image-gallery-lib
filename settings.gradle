@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ImageGallery"
-include ':app'
+include ':app', ':galleryimage'

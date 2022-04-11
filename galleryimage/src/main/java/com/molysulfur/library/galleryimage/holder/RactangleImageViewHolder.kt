@@ -1,12 +1,11 @@
-package com.molysulfur.library.imagegallery.holder
+package com.molysulfur.library.galleryimage.holder
 
 import android.graphics.Bitmap
 import android.view.View
-import android.view.ViewStub
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.molysulfur.library.imagegallery.ImageGalleryItem
-import com.molysulfur.library.imagegallery.R
+import com.molysulfur.library.galleryimage.ImageGalleryItem
+import com.molysulfur.library.galleryimage.R
 
 class RactangleImageViewHolder constructor(private val view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: ImageGalleryItem.RactangleItem, onClick: ((Bitmap?) -> Unit)?) {

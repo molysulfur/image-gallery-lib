@@ -1,4 +1,4 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.example.imagegallery
 
 import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.ImageLoader
 import coil.request.ImageRequest
+import com.molysulfur.library.imagegallery.R
 import kotlinx.coroutines.launch
 
 /**
@@ -19,11 +20,11 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private val urlLists = mutableListOf(
-        "https://source.unsplash.com/random/500x1000",
-        "https://source.unsplash.com/random/500x1000",
-        "https://source.unsplash.com/random/500x1000",
-        "https://source.unsplash.com/random/500x1000",
-        "https://source.unsplash.com/random/500x1000"
+        "https://source.unsplash.com/random/1000x500",
+        "https://source.unsplash.com/random/1000x500",
+//        "https://source.unsplash.com/random/500x1000",
+//        "https://source.unsplash.com/random/500x1000",
+//        "https://source.unsplash.com/random/500x1000"
     )
 
     companion object {

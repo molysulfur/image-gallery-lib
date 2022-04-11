@@ -1,4 +1,4 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.library.galleryimage
 
 import android.graphics.Bitmap
 import android.os.Parcelable

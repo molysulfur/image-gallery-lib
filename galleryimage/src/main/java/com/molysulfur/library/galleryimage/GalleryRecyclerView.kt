@@ -1,9 +1,8 @@
-package com.molysulfur.library.imagegallery
+package com.molysulfur.library.galleryimage
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.util.AttributeSet
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 
 class GalleryRecyclerView @JvmOverloads constructor(
@@ -15,7 +14,6 @@ class GalleryRecyclerView @JvmOverloads constructor(
     companion object {
         private val LIMIT_SIZE = 3
     }
-
 
     private var urlLists = mutableListOf<Bitmap?>()
 
