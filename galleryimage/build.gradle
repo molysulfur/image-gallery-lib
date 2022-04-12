@@ -5,14 +5,14 @@ plugins {
 }
 
 ext {
-    PUBLISH_GROUP_ID = 'com.molysulfur.library.imagegallery'
+    PUBLISH_GROUP_ID = 'io.github.molysulfur'
     PUBLISH_VERSION = '1.0.0'
     PUBLISH_ARTIFACT_ID = 'imagegallery'
     PUBLISH_DESCRIPTION = 'Imageg Gallery Android SDK'
     PUBLISH_URL = 'https://github.com/molysulfur/image-gallery-lib'
     PUBLISH_LICENSE_NAME = 'Apache License'
     PUBLISH_LICENSE_URL = 'https://github.com/elye/loaderviewlibrary/blob/master/LICENSE'
-    PUBLISH_DEVELOPER_ID = 'elye'
+    PUBLISH_DEVELOPER_ID = 'molysulfur'
     PUBLISH_DEVELOPER_NAME = 'Apirom Yaboon'
     PUBLISH_DEVELOPER_EMAIL = 'molysulfur.mos@gmail.com'
     PUBLISH_SCM_CONNECTION = 'scm:git:github.com:molysulfur/image-gallery-lib.git'
@@ -20,7 +20,7 @@ ext {
     PUBLISH_SCM_URL = 'https://github.com/molysulfur/image-gallery-lib/tree/main'
 }
 
-//apply from: "${rootProject.projectDir}/publish/maven_push.gradle"
+apply from: "${rootProject.projectDir}/publish/maven_push.gradle"
 
 android {
     compileSdk 31
